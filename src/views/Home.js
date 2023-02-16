@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';
-import Navbar from './components/Navbar';
-import Card from './components/Card';
+import '../App.css';
+import Navbar from '../components/Navbar';
+import Card from '../components/Card';
 
-const App = () => {
+const Home = () => {
   const [cards, setCards] = useState([]);
   const [showFavorites, setShowFavorites] = useState(false);
 
-  const handleFavorite = (id, name) => {
+  const handleFavorite = (id) => {
     const newCards = cards.map((card) => {
       if (card.id === id) {
         return {
@@ -79,4 +79,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Home;
