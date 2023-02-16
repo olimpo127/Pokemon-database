@@ -7,7 +7,7 @@ const App = () => {
   const [cards, setCards] = useState([]);
   const [showFavorites, setShowFavorites] = useState(false);
 
-  const handleFavorite = (id, name) => {
+  const handleFavorite = (id) => {
     const newCards = cards.map((card) => {
       if (card.id === id) {
         return {
