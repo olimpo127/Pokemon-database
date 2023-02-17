@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = ({ favoriteNames, showFavorites, handleShowFavorites, handleRemoveFavorite }) => {
   const favoriteCount = favoriteNames.length;
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark" style={{ display: 'flex', alignItems: 'center' }}>
-      <a className="navbar-brand ms-3" href="http://localhost:3000/">Home</a>
+      <Link className="navbar-brand ms-3" to="http://localhost:3000/">HOME</Link>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>

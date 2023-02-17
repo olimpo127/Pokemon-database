@@ -1,4 +1,8 @@
 const Card = ({ card, handleFavorite }) => {
+  const handleClick = () => {
+    window.location.replace(`http://localhost:3000/pokemon/${card.id}`);
+  };
+
   return (
     <div
       style={{
@@ -10,7 +14,8 @@ const Card = ({ card, handleFavorite }) => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        textAlign: 'center'
+        textAlign: 'center',
+        borderRadius: '5px' // add border-radius
       }}
     >
       <h2>{card.name}</h2>
@@ -19,7 +24,7 @@ const Card = ({ card, handleFavorite }) => {
       <button onClick={() => handleFavorite(card.id, card.name)} style={{ background: "white", border: "none" }}>
         <i className={card.favorite ? "fa-solid fa-heart text-danger fa-lg" : "fa-regular fa-heart fa-lg"}></i>
       </button>
-      <button className='btn btn-primary mt-3'>Read more</button>
+      <button className='btn btn-primary mt-3' onClick={handleClick}>Read more</button>
     </div>
   );
 };
