@@ -10,7 +10,7 @@ const Card = ({ card, handleFavorite }) => {
         margin: '40px',
         border: '1px solid black',
         background: 'white',
-        padding: '10px',
+        padding: '11px',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
